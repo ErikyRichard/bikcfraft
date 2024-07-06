@@ -1,0 +1,58 @@
+.parceiros {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.parceiros h2 {
+  margin-bottom: 60px;
+}
+
+.parceiros ul {
+  padding: 0 20px;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+}
+
+.parceiros li {
+  display: flex;
+  padding: 32px;
+  border-left: 2px solid var(--cor-2);
+}
+
+.parceiros img {
+  margin: auto;
+  /* margin auto para criar margem nas imagens para elas se alinharem ao centro da propria imagem (estavam tortas) */
+}
+
+.parceiros li:first-child,
+li:nth-child(5) {
+  /* para tirar as bordas left do primeiro e 5 item (imagem) */
+  border-left: none;
+}
+
+.parceiros li:nth-child(n + 5) {
+  /* para colocar bordas no top dos itens(imagens) a partir do 5 item(imagem)  */
+  border-top: 2px solid var(--cor-2);
+}
+
+@media (max-width: 800px) {
+  .parceiros {
+    padding-bottom: 60px;
+  }
+  .parceiros h2 {
+    margin-bottom: 20px;
+  }
+  .parceiros ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .parceiros li:nth-child(n + 3) {
+    /* para colocar bordas no top dos itens(imagens) a partir do 3 item(imagem)  */
+    border-top: 2px solid var(--cor-2);
+  }
+  .parceiros li:nth-child(odd) {
+    /* removi borda left dos itens impares(odd)  */
+    border-left: none;
+  }
+}
