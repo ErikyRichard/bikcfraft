@@ -20,6 +20,7 @@
   font-weight: 600;
   max-width: max-content;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .botao:hover {
